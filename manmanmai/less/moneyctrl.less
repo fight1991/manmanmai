@@ -1,0 +1,120 @@
+// 页面容器
+.mm_container {
+    // height: 2000px;
+    width: 100%;
+    max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #F1F1F1;
+}
+//头部区域
+.mm_header {
+    height: 50px;
+    width: 100%;
+    background-color: #FF841D;
+    position: relative;
+    padding: 0 50px;
+    color: #fff;
+    h1 {
+       text-align: center;
+       line-height: 50px;  
+       font-size: 20px;
+    }
+    
+    .icon_back,
+    .mm_app {
+        position: absolute;
+        top: 0;
+    }
+    .icon_back {
+        text-align: center;
+        line-height: 50px;
+        font-size: 22px;
+        color: #fff;
+        left: 0;
+        width: 50px;
+        height: 50px;
+    }
+    .mm_app {
+        
+        right: 0;
+        a {
+            display: block;
+            padding: 8px;
+        }
+        img {
+            width:34px;
+            height: 34px;
+        }
+    }
+}
+
+
+//折扣推荐区域
+.mm_comment {
+    margin-top: 5px;
+
+    
+    .content .item_info {
+        background-color: #fff;
+        padding:14px 8px;
+        border-bottom: 1px solid #ccc;
+        .left {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        .right {
+            // width: 100%;
+            overflow: hidden;
+            padding-left: 10px;
+            p {
+                height: 57px;
+                span {
+                    color: orange;
+                }
+            }
+            .other {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+            .other .mall {
+                float: left;
+            }
+            .other .comment {
+                float: right;
+            }
+        }
+    }
+}
+
+//底部区域
+.mm_footer {
+   border-bottom: 1px solid #ccc;
+   padding-bottom: 10px;
+    .foot_top {
+        a {
+            display: block;
+            width: 33.3%;
+            float: left;
+            text-align: center;
+            height: 34px;
+            line-height:34px;
+        }
+        a:first-child {
+            border-left: none;
+        }
+        a:last-child {
+            border-right: none;
+        }
+        
+    }
+    .mobile_app {
+        margin-top: 10px;
+        text-align:center;
+        font-size: 12px;
+        color: #666;
+    }
+}
+

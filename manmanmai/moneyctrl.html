@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买首页</title>
+    <title>moneyctrl</title>
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
 </head>
+
 <body>
     <div class="mm_container">
         <!-- 头部区域 -->
         <div class="mm_header">
-            <div class="mm_logo"><a href="index.html"><img src="./images/header_logo.png" alt=""></a></div>
-            <div class="mm_app"><a href="#"><img src="./images/header_app.png" alt=""></a></div>
+            <div class="back">
+                <a href="index.html" class="icon_back"><i class="fa fa-chevron-left"></i></a>                
+            </div>
+            <h1>省钱控 - 最新优惠</h1>
+            <div class="mm_app">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
         </div>
-        <!-- 搜索区域 -->
-        <div class="mm_search">
-            <input type="text" placeholder="请输入你想比价的商品">
-            <input type="button" value="搜索">
-        </div>
-        <!-- 导航区域 -->
-        <div class="mm_nav">
-            <!-- 挖坑 -->
-        </div>
+        
         <!-- 折扣推荐区域 -->
         <div class="mm_comment">
-            <div class="mm_title">
-                <span>超值折扣推荐</span>
-                <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
-            </div>
+
             <div class="content">
                 <div class="item_info clearfix">
-                    <div class="left"><img src="" alt=""></div>
+                    <div class="left">
+                        <img src="" alt="">
+                    </div>
                     <div class="right">
-                        <p>移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>
+                        <p>移动端凑单品：海天 鲜味 生抽 1.28L
+                            <span>10.9元</span>
+                        </p>
                         <div class="other">
                             <span class="mall">京东商城 | 10-25 14:10</span>
                             <span class="comment">1</span>
@@ -43,15 +45,9 @@
                     </div>
                 </div>
             </div>
-            <div class="more_info">
-                <a href="#">更多优惠信息>></a>
-            </div>
+
         </div>
-        <!-- 品牌排行区域 -->
-        <div class="mm_brandList">
-            <span>超值折扣推荐</span>
-            <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
-        </div>
+        
         <!-- 底部区域 -->
         <div class="mm_footer">
             <div class="foot_top">
@@ -69,7 +65,7 @@
             </div>
         </div>
     </div>
-    <!-- 导航区域模板 -->
+    
     <script type="text/html" id="nav_tpl">
         <!-- <ul class="clearfix">
             
@@ -86,4 +82,5 @@
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/index.js"></script>
 </body>
+
 </html>

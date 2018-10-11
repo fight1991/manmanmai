@@ -1,0 +1,65 @@
+.mm_container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #F1F1F1;
+}
+.mm_header {
+  height: 50px;
+  width: 100%;
+  background-color: #FF841D;
+  position: relative;
+}
+.mm_header .mm_logo,
+.mm_header .mm_app {
+  position: absolute;
+  top: 0;
+}
+.mm_header .mm_logo {
+  left: 0;
+}
+.mm_header .mm_logo a {
+  display: block;
+  padding: 12.5px;
+}
+.mm_header .mm_logo img {
+  display: block;
+  width: 185.5px;
+  height: 25px;
+}
+.mm_header .mm_app {
+  right: 0;
+}
+.mm_header .mm_app a {
+  display: block;
+  padding: 8px;
+}
+.mm_header .mm_app img {
+  width: 34px;
+  height: 34px;
+}
+.mm_footer {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.mm_footer .foot_top a {
+  display: block;
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  height: 34px;
+  line-height: 34px;
+}
+.mm_footer .foot_top a:first-child {
+  border-left: none;
+}
+.mm_footer .foot_top a:last-child {
+  border-right: none;
+}
+.mm_footer .mobile_app {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}

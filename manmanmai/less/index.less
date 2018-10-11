@@ -1,1 +1,133 @@
-@import "base";
+
+
+//搜索区域
+.mm_search {
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    padding-right: 80px;
+    background-color: #fff;
+    input {
+        line-height: 30px;
+        border-radius: 15px;
+        border: none;
+    }
+    [type="text"] {
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 30px;
+        background-color: #f1f1f1;
+    }
+    [type="button"] {
+        width: 63px;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #fff;
+        background-color: #ff841d;
+    }
+}
+//导航区域
+.mm_nav {
+    background-color: #fff;
+    margin-top: 10px;
+    ul {
+        padding: 10px 0 10px;
+        overflow: hidden;
+    }
+    ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        margin-top: 15px;
+        &.current {
+            display: none;
+        }
+        a {
+            display: block;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        p {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    }
+}
+//折扣推荐区域
+.mm_comment {
+    margin-top: 5px;
+
+    .mm_title {
+        color: #fff;
+        padding: 0 10px;
+        line-height:35px;
+        height: 35px;
+        background-image: linear-gradient(to bottom,#ffaf47,#ff9000);
+        img {
+            float:right;
+            margin-top: 8px;
+        }
+    }
+    .content .item_info {
+        background-color: #fff;
+        padding:14px 8px;
+        border-bottom: 1px solid #ccc;
+        .left {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        .right {
+            // width: 100%;
+            overflow: hidden;
+            padding-left: 10px;
+            p {
+                height: 57px;
+                span {
+                    color: orange;
+                }
+            }
+            .other {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+            .other .mall {
+                float: left;
+            }
+            .other .comment {
+                float: right;
+            }
+        }
+    }
+    .more_info {
+        text-align:center;
+        padding: 10px 5px;
+        a {
+            line-height: 30px;
+            display: block;
+            background-image: linear-gradient(to bottom,#fff,#f4f4f4);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    }
+}
+// 品牌排行区域
+.mm_brandList {
+ 
+        color: #fff;
+        padding: 0 10px;
+        line-height:35px;
+        height: 35px;
+        background-image: linear-gradient(to bottom,#ffaf47,#ff9000);
+        img {
+            float:right;
+            margin-top: 8px;
+        }
+    
+}

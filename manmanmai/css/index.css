@@ -1,0 +1,123 @@
+.mm_search {
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  padding-right: 80px;
+  background-color: #fff;
+}
+.mm_search input {
+  line-height: 30px;
+  border-radius: 15px;
+  border: none;
+}
+.mm_search [type="text"] {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 30px;
+  background-color: #f1f1f1;
+}
+.mm_search [type="button"] {
+  width: 63px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  background-color: #ff841d;
+}
+.mm_nav {
+  background-color: #fff;
+  margin-top: 10px;
+}
+.mm_nav ul {
+  padding: 10px 0 10px;
+  overflow: hidden;
+}
+.mm_nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-top: 15px;
+}
+.mm_nav ul li.current {
+  display: none;
+}
+.mm_nav ul li a {
+  display: block;
+}
+.mm_nav ul li img {
+  width: 50px;
+  height: 50px;
+}
+.mm_nav ul li p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.mm_comment {
+  margin-top: 5px;
+}
+.mm_comment .mm_title {
+  color: #fff;
+  padding: 0 10px;
+  line-height: 35px;
+  height: 35px;
+  background-image: linear-gradient(to bottom, #ffaf47, #ff9000);
+}
+.mm_comment .mm_title img {
+  float: right;
+  margin-top: 8px;
+}
+.mm_comment .content .item_info {
+  background-color: #fff;
+  padding: 14px 8px;
+  border-bottom: 1px solid #ccc;
+}
+.mm_comment .content .item_info .left {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  float: left;
+}
+.mm_comment .content .item_info .right {
+  overflow: hidden;
+  padding-left: 10px;
+}
+.mm_comment .content .item_info .right p {
+  height: 57px;
+}
+.mm_comment .content .item_info .right p span {
+  color: orange;
+}
+.mm_comment .content .item_info .right .other {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.mm_comment .content .item_info .right .other .mall {
+  float: left;
+}
+.mm_comment .content .item_info .right .other .comment {
+  float: right;
+}
+.mm_comment .more_info {
+  text-align: center;
+  padding: 10px 5px;
+}
+.mm_comment .more_info a {
+  line-height: 30px;
+  display: block;
+  background-image: linear-gradient(to bottom, #ffffff, #f4f4f4);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.mm_brandList {
+  color: #fff;
+  padding: 0 10px;
+  line-height: 35px;
+  height: 35px;
+  background-image: linear-gradient(to bottom, #ffaf47, #ff9000);
+}
+.mm_brandList img {
+  float: right;
+  margin-top: 8px;
+}
