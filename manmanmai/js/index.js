@@ -40,11 +40,6 @@ $(function(){
 
 
 
-    //封装自拼接绝对地址的ajax请求
-    function getData(url) {
-        var baseUrl = 'http://127.0.0.1:9090/';
-        var url = baseUrl + url;
-       return url;
-    }
+ 
     
 })

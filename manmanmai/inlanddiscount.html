@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <!-- 引入公共样式,包含normalize,base,adaptor -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/islanddiscount.css">
+</head>
+
+<body>
+    <div class="mm_container">
+        <!-- 头部区域 -->
+        <div class="mm_header">
+            <div class="back">
+                <a href="index.html" class="icon_back">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+            <h1>国内折扣</h1>
+            <div class="mm_app">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- 折扣区域-->
+        <div class="mm_discount">
+            <div class="discount_info">
+                <!-- 挖坑 -->
+                
+            </div>
+
+        </div>
+
+        <!-- 底部区域 --> 
+        <div class="mm_footer">
+            <div class="foot_top clearfix">
+                <a href="#" class="foot_login">登陆</a>
+                <a href="#" class="register">注册</a>
+                <a href="#" class="backTop">返回顶部</a>
+            </div>
+            <div class="mobile_app">
+                <p>
+                    <a href="#" style="color:red">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- 折扣区域模板 -->
+    <script type="text/html" id = "discount_tpl">
+    <ul class="clearfix">
+        {{each result v i }}
+        <li class="img_box">
+            <a href="discount.html?productid={{v.productId}}">
+                <div class="img">
+                    {{@v.productImg}}
+                </div>
+                <div class="title">{{v.productName}}</div>
+                <div class="subtit" style="color:orange;">{{v.productPrice}}</div>
+                <div class="info">
+                    <div class="mall">京东商城 | {{v.productTime}}</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    
+    
+    </script>
+   
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+   
+</body>
+
+</html>

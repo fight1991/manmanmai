@@ -1,0 +1,37 @@
+/* 此文件专门用于设置媒体查询, 来动态修改html根字体大小 */
+// 设计图尺寸, 基准值
+
+// 公式: 当前屏幕宽度 / 设计图尺寸 = 当前屏幕根字体大小 / 基准值
+//       当前屏幕根字体大小 = 当前屏幕宽度 / 设计图尺寸 * 基准值
+
+// 导入变量
+@import "variable";
+
+
+//@media screen and (条件) and (条件)
+//@media (条件) and (条件)
+
+
+// 320px 360px 375px 384px 400px 414px 424px 480px 540px 640px 720px 750px
+// 当前屏幕根字体大小 = 当前屏幕宽度 / 设计图尺寸 * 基准值
+.adaptor(@value: 320px) {
+  // >=320
+  @media (min-width: @value) {
+    html {
+      font-size: @value / @design * @base;
+    }
+  }
+}
+
+.adaptor(320px);
+.adaptor(360px);
+.adaptor(375px);
+.adaptor(384px);
+.adaptor(400px);
+.adaptor(414px);  // 适配 414 的屏幕
+.adaptor(424px);
+.adaptor(480px);
+.adaptor(540px);
+.adaptor(640px);
+.adaptor(750px);
+

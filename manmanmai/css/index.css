@@ -50,6 +50,7 @@
   display: block;
 }
 .mm_nav ul li img {
+  margin: 0 auto;
   width: 50px;
   height: 50px;
 }

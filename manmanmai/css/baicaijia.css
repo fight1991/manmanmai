@@ -1,0 +1,124 @@
+.mm_header {
+  height: 50px;
+  width: 100%;
+  background-color: #f4483e;
+  position: relative;
+  padding: 0 50px;
+  color: #fff;
+}
+.mm_header h1 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0;
+}
+.mm_header .icon_back,
+.mm_header .mm_app {
+  position: absolute;
+  top: 0;
+}
+.mm_header .icon_back {
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  color: #fff;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.mm_header .mm_app {
+  right: 0;
+}
+.mm_header .mm_app a {
+  display: block;
+  padding: 8px;
+}
+.mm_header .mm_app img {
+  width: 34px;
+  height: 34px;
+}
+.mm_bcj .bcj_nav {
+  margin-bottom: 5px ;
+  background-color: #fff;
+}
+.mm_bcj .bcj_nav li {
+  float: left;
+  margin: 0 .12rem;
+  line-height: .38rem;
+}
+.mm_bcj .bcj_nav li a {
+  height: .38rem;
+  display: block;
+  border-bottom: 1px solid transparent;
+}
+.mm_bcj .bcj_nav li a.current {
+  border-bottom: 1px solid red;
+  color: red;
+}
+.mm_bcj .bcj_content {
+  padding: 0 5px;
+  background-color: #fff;
+}
+.mm_bcj .bcj_content li {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.mm_bcj .bcj_content .img_box {
+  float: left;
+}
+.mm_bcj .bcj_content .img_box img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.mm_bcj .bcj_content .img_info {
+  overflow: hidden;
+}
+.mm_bcj .bcj_content .img_info .title {
+  height: .2rem;
+}
+.mm_bcj .bcj_content .img_info .price {
+  height: .3rem;
+  line-height: .3rem;
+}
+.mm_bcj .bcj_content .img_info .price .nowPrice {
+  color: red;
+  font-size: .18rem;
+}
+.mm_bcj .bcj_content .img_info .price .oldPrice {
+  color: #666;
+  text-decoration: line-through;
+}
+.mm_bcj .bcj_content .ticket_num {
+  padding: 10px 0;
+}
+.mm_bcj .bcj_content .ticket_num .num {
+  color: #fc353a;
+}
+.mm_bcj .bcj_content .ticket_num .percent {
+  display: inline-block;
+  width: .82rem;
+  height: 14px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  border-radius: 20px ;
+  border: 1px solid #fc353a;
+  background-color: #ffb7b7;
+  text-align: center;
+}
+.mm_bcj .bcj_content .ticket_link {
+  line-height: .3rem;
+}
+.mm_bcj .bcj_content .ticket_link .left {
+  height: .3rem;
+  float: left;
+  border: 1px dashed #fc353a;
+}
+.mm_bcj .bcj_content .ticket_link .right {
+  float: right;
+  background-color: #f4483e;
+  height: .3rem;
+  width: .6rem;
+  border-radius: 3px;
+  color: #fff;
+}

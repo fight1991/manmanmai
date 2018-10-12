@@ -1,3 +1,9 @@
+
+@import "normalize"; //引入基础样式文件
+@import "base" ; //去除normalize一些保留的样式
+@import "adaptor";//引入媒体查询,动态设置html根字体大小
+
+
 // 页面容器
 .mm_container {
     // height: 2000px;
@@ -51,6 +57,7 @@
    border-bottom: 1px solid #ccc;
    padding-bottom: 10px;
     .foot_top {
+        margin-top: 25px;
         a {
             display: block;
             width: 33.3%;
@@ -58,14 +65,12 @@
             text-align: center;
             height: 34px;
             line-height:34px;
+            border: 1px solid #ccc;
+            border-right:none;
+            &:first-child {
+                border-left: none;
+            }
         }
-        a:first-child {
-            border-left: none;
-        }
-        a:last-child {
-            border-right: none;
-        }
-        
     }
     .mobile_app {
         margin-top: 10px;

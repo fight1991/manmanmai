@@ -1,12 +1,4 @@
-// 页面容器
-.mm_container {
-    // height: 2000px;
-    width: 100%;
-    max-width: 750px;
-    min-width: 320px;
-    margin: 0 auto;
-    background-color: #F1F1F1;
-}
+
 //头部区域
 .mm_header {
     height: 50px;
@@ -19,6 +11,7 @@
        text-align: center;
        line-height: 50px;  
        font-size: 20px;
+       margin: 0;
     }
     
     .icon_back,
@@ -52,9 +45,7 @@
 
 //折扣推荐区域
 .mm_comment {
-    margin-top: 5px;
-
-    
+    margin-top: 5px;   
     .content .item_info {
         background-color: #fff;
         padding:14px 8px;
@@ -62,8 +53,11 @@
         .left {
             width: 100px;
             height: 100px;
-            background-color: green;
             float: left;
+            img {
+                width: 100px;
+                height: 100px;
+            }
         }
         .right {
             // width: 100%;
@@ -87,34 +81,38 @@
             }
         }
     }
+    .page {
+        padding: .2rem 0 ;
+        background-color: #fff;
+    }
+    .page span {
+        float: left;
+        width: 33.3%;
+        line-height: .33rem;
+        text-align: center;
+        a {
+            background-image:linear-gradient(to bottom,#f1f1f1,#d4d4d4);
+            border-radius: 5px;
+            border:1px solid #ccc;
+        }
+        a,
+        select {
+            display: block;
+            margin: 0 auto;
+            width: 82px;
+            height: 33px;
+        }
+        select {
+            padding-left: 10px;
+            width: 95px;
+            height: 35px;
+        }
+        select option {
+            text-align: center;
+            
+        }
+    }
 }
 
-//底部区域
-.mm_footer {
-   border-bottom: 1px solid #ccc;
-   padding-bottom: 10px;
-    .foot_top {
-        a {
-            display: block;
-            width: 33.3%;
-            float: left;
-            text-align: center;
-            height: 34px;
-            line-height:34px;
-        }
-        a:first-child {
-            border-left: none;
-        }
-        a:last-child {
-            border-right: none;
-        }
-        
-    }
-    .mobile_app {
-        margin-top: 10px;
-        text-align:center;
-        font-size: 12px;
-        color: #666;
-    }
-}
+
 

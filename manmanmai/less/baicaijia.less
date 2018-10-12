@@ -1,0 +1,132 @@
+//头部区域
+.mm_header {
+    height: 50px;
+    width: 100%;
+    background-color: #f4483e;
+    position: relative;
+    padding: 0 50px;
+    color: #fff;
+    h1 {
+       text-align: center;
+       line-height: 50px;  
+       font-size: 20px;
+       margin: 0;
+    }
+    
+    .icon_back,
+    .mm_app {
+        position: absolute;
+        top: 0;
+    }
+    .icon_back {
+        text-align: center;
+        line-height: 50px;
+        font-size: 22px;
+        color: #fff;
+        left: 0;
+        width: 50px;
+        height: 50px;
+    }
+    .mm_app {
+        
+        right: 0;
+        a {
+            display: block;
+            padding: 8px;
+        }
+        img {
+            width:34px;
+            height: 34px;
+        }
+    }
+}
+//bcj导航区域
+.mm_bcj {
+    .bcj_nav {
+        margin-bottom: 5px ;
+        background-color: #fff;
+        li {
+            float: left;
+            margin: 0 .12rem;
+            line-height: .38rem;
+            a {
+                height: .38rem;
+                display: block;
+                border-bottom: 1px solid transparent;
+                &.current {
+                    border-bottom:1px solid red;
+                    color: red;
+                }
+            }
+        }
+    }
+    .bcj_content {
+        padding: 0 5px;
+        background-color: #fff;
+        li {
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .img_box {
+            float: left;
+        }
+        .img_box img {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+        .img_info {
+            overflow: hidden;
+            .title {
+                height: .2rem;
+            }
+            .price {
+                height: .3rem;
+                line-height: .3rem;
+                .nowPrice {
+                    color: red;
+                    font-size: .18rem;
+                }
+                .oldPrice {
+                    color: #666;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        .ticket_num  {
+            padding: 10px 0;
+            .num {
+                color: #fc353a;
+            }
+        }
+        .ticket_num .percent {
+            display: inline-block;
+            width: .82rem;
+            height: 14px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #fff;
+            border-radius: 20px ;
+            border:1px solid #fc353a;
+            background-color: #ffb7b7;
+            text-align: center;
+        }
+        .ticket_link {
+            line-height: .3rem;
+            .left{
+                height: .3rem;
+                float: left;
+                border: 1px dashed #fc353a;
+            }
+            .right {
+                float: right;
+                background-color: #f4483e;
+                height: .3rem;
+                width: .6rem;
+                border-radius: 3px;
+                color: #fff;
+                
+            }
+        }
+        
+    }
+}

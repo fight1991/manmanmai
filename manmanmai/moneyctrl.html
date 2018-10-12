@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>moneyctrl</title>
-    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入公共样式,包含normalize,base,adaptor -->
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/moneyctrl.css">
 </head>
@@ -26,31 +27,17 @@
             </div>
         </div>
         
-        <!-- 折扣推荐区域 -->
+        <!-- 折扣推荐区域///更多优惠 -->
         <div class="mm_comment">
-
             <div class="content">
-                <div class="item_info clearfix">
-                    <div class="left">
-                        <img src="" alt="">
-                    </div>
-                    <div class="right">
-                        <p>移动端凑单品：海天 鲜味 生抽 1.28L
-                            <span>10.9元</span>
-                        </p>
-                        <div class="other">
-                            <span class="mall">京东商城 | 10-25 14:10</span>
-                            <span class="comment">1</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- 挖坑 -->
             </div>
 
         </div>
         
         <!-- 底部区域 -->
         <div class="mm_footer">
-            <div class="foot_top">
+            <div class="foot_top clearfix">
                 <a href="#" class="foot_login">登陆</a>
                 <a href="#" class="register">注册</a>
                 <a href="#" class="backTop">返回顶部</a>
@@ -66,21 +53,48 @@
         </div>
     </div>
     
-    <script type="text/html" id="nav_tpl">
-        <!-- <ul class="clearfix">
-            
-            <li>
-                <a href="{{ v.titlehref }}">
-                    {{v.img}}
-                    <p>{{v.name}}</p>
+    <!-- 折扣推荐区域///更多优惠模板-->
+    <script type="text/html" id="comment_tpl">
+            <ul>
+            {{ each result v i }}
+            <li class="item_info clearfix">
+                <a href="moneyproduct.html?productId="{{ v.productId }}>
+                    <div class="left">{{@v.productImg2}}</div>
+                    <div class="right">
+                    <p>{{v.productName}} <span>{{v.productPinkage}}</span></p>
+                    <div class="other">
+                        <span class="mall">{{ v.productFrom }} | {{v.productTime }}</span>
+                        <span class="comment">
+                            <i class="fa fa-commenting-o"></i>&nbsp;{{v.productComCount.substr(1,1)}} 
+                        </span>
+                    </div>
+                </div>
                 </a>
             </li>
-          
-        </ul> -->
-    </script>
+            {{ /each }}
+            </ul>
+                <div class="page clearfix">
+                <span><a href="#">上一页</a></span>
+                <span>
+                    <select id = "selectPage">
+                        {{each page v i}}
+                            {{if v.pageid == 1 }}
+                            <option value="{{v.pageid}}" selected>{{v.pageid}}/{{ pageCount }}</option>
+                            {{else}}
+                            <option value="{{v.pageid}}" >{{v.pageid}}/{{ pageCount }}</option>
+                            {{/if}}
+                        
+                        {{/each}}
+                    </select>
+                </span>
+                <span><a href="#">下一页</a></span>
+            </div>
+        </script>
+         <!-- {{Math.floor(totalCount/pagesize)}} -->
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyctrl.js"></script>
 </body>
 
 </html>
