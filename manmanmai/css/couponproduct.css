@@ -1,0 +1,68 @@
+.mm_header {
+  height: 50px;
+  width: 100%;
+  background-color: #f4483e;
+  position: relative;
+  padding: 0 50px;
+  color: #fff;
+}
+.mm_header h1 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0;
+}
+.mm_header .icon_back,
+.mm_header .mm_app {
+  position: absolute;
+  top: 0;
+}
+.mm_header .icon_back {
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  color: #fff;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.mm_header .mm_app {
+  right: 0;
+}
+.mm_header .mm_app a {
+  display: block;
+  padding: 8px;
+}
+.mm_header .mm_app img {
+  width: 34px;
+  height: 34px;
+}
+.mm_coupon {
+  background-color: #fff;
+}
+.mm_coupon .title {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.mm_coupon .product {
+  padding: 20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.mm_coupon .product img {
+  width: 100px;
+  height: 80px;
+}
+.mm_coupon .product .img {
+  float: left;
+}
+.mm_coupon .product .info {
+  padding-left: 10px;
+  overflow: hidden;
+}
+.mm_coupon .product .info .date {
+  color: orange;
+}
+.mm_coupon .product .info .text {
+  height: 50px;
+}

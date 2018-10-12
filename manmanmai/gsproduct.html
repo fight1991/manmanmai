@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>白菜价</title>
+    <title>gsproduct</title>
     <!-- 引入公共样式,包含normalize,base,adaptor -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/baicaijia.css">
-    
+    <link rel="stylesheet" href="./css/gsproduct.css">
 </head>
 
 <body>
@@ -22,7 +21,7 @@
                     <i class="fa fa-chevron-left"></i>
                 </a>
             </div>
-            <h1>白菜价-淘宝内部券</h1>
+            <h1>凑单品</h1>
             <div class="mm_app">
                 <a href="#">
                     <img src="./images/header_app.png" alt="">
@@ -30,21 +29,37 @@
             </div>
         </div>
 
-        <!-- 白菜价区域-->
-        <div class="mm_bcj">
-            <div class="bcj_nav">
-                <!-- 挖坑 -->
+        <!-- 折扣推荐区域///更多优惠 -->
+        <div class="mm_gsproduct">
+            <div class="one_nav clearfix">
                 
+                <a href="#" class="mall">
+                    <div class="title">天猫超市</div>
+                    <ul>
+                        <!-- 挖坑 -->
+                    </ul>
+                    
+                </a>
+                <a href="#" class="area">
+                    <div class="title">华中</div>
+                    <ul>
+                        <!-- 挖坑 -->
+                    </ul>
+                </a>
+                <a href="#" class="price">
+                    <div class="title">全部价格</div>
+                    <ul>
+                        <li>全部价格</li>
+                    </ul>
+                </a>
 
-            </div>
-            <div class="bcj_content">
+
+            </div>           
+            <div class="content">
                 <!-- 挖坑 -->
-                
             </div>
-
 
         </div>
-     
 
         <!-- 底部区域 -->
         <div class="mm_footer">
@@ -63,57 +78,39 @@
             </div>
         </div>
     </div>
-    <!-- 导航模板 -->
-    <script type="text/html" id = "nav_tpl">
-    
-        <ul class="clearfix nav" >
-            {{ each result v i }}
-            {{ if v.titleId == 0 }}
-            <li  class="current" data-titleid = "{{v.titleId}}"><a href="javascript:;">{{ v.title }}</a></li>
-            {{ else }}
-            <li data-titleid = "{{v.titleId}}"><a href="javascript:;">{{ v.title }}</a></li>
-            {{ /if }}
-            {{/each}}
-        </ul>
-
+    <!-- 一级导航渲染模板 -->
+    <script type="text/html" id="mall_tpl">
+        {{ each result v i }}
+            <li data-shopid = "{{ v.shopId }}">{{ v.shopName }}</li>
+        {{ /each }}          
     </script>
-    <!-- 产品详细内容模板 -->
-    <script type = "text/html" id = "content_tpl">
-    
-        <ul>
+    <!-- 一级导航渲染模板 -->
+    <script type="text/html" id="area_tpl">
             {{ each result v i }}
+                <li data-areaid = "{{ v.areaId }}">{{ v.areaName }}</li>
+            {{ /each }}          
+    </script>
+    <script type="text/html" id="content_tpl">
+        <ul>
+            {{each result v i }}
             <li>
                 <a href="">
-                    <div class="img_box">{{@v.productImg}}</div>
-                    <div class="img_info">
-                        <p class="title">{{@v.productName}}</p>
-                        <p class="price">
-                            {{@v.productPrice}}
-                        </p>
-                        <div class="ticket_num">
-                            {{@v.productCouponRemain}}
-                        </div>
-                        <div class="ticket_link">
-                            <span href="#" class="left">{{@v.productCoupon}}</a>
-                            <span href="#" class="right">{{@v.productHref}}</a>
-                        </div>                        
+                    <img src="{{ v.productImg }}" alt="">
+                    <p>{{ v.productName }}</p>
+                    <div class="golink clearfix">
+                        <span class="price">{{ v.productPrice }}</span>
+                        <span class="goBtn fr">去凑单</span>
                     </div>
                 </a>
             </li>
             {{/each}}
         </ul>
-    
-    
     </script>
-
-
+  
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/bcj.js"></script>
-  
-
-
+    <script src="./js/gsproduct.js"></script>
 </body>
 
 </html>

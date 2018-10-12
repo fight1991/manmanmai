@@ -1,3 +1,11 @@
+//点击底部返回顶部按钮返回顶部
+$(function(){
+    $('.mm_footer .backTop').click(function(){
+        $('html,body').scrollTop(0);
+    })
+})
+
+
 //封装自拼接绝对地址的ajax请求
 function getData(url) {
     var baseUrl = 'http://127.0.0.1:9090/';

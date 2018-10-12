@@ -51,7 +51,7 @@
   display: block;
   border-bottom: 1px solid transparent;
 }
-.mm_bcj .bcj_nav li a.current {
+.mm_bcj .bcj_nav li.current a {
   border-bottom: 1px solid red;
   color: red;
 }
