@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>慢慢买首页</title>
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -32,24 +33,15 @@
                 <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
             </div>
             <div class="content">
-                <div class="item_info clearfix">
-                    <div class="left"><img src="" alt=""></div>
-                    <div class="right">
-                        <p>移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span></p>
-                        <div class="other">
-                            <span class="mall">京东商城 | 10-25 14:10</span>
-                            <span class="comment">1</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- 挖坑 -->
             </div>
             <div class="more_info">
-                <a href="#">更多优惠信息>></a>
+                <a href="moneyctrl.html">更多优惠信息>></a>
             </div>
         </div>
         <!-- 品牌排行区域 -->
         <div class="mm_brandList">
-            <span>超值折扣推荐</span>
+            <span>品牌排行</span>
             <img src="http://www.zuyushop.com/wap/images/more.png" width="20" height="20">
         </div>
         <!-- 底部区域 -->
@@ -69,18 +61,26 @@
             </div>
         </div>
     </div>
-    <!-- 导航区域模板 -->
-    <script type="text/html" id="nav_tpl">
-        <!-- <ul class="clearfix">
-            
-            <li>
-                <a href="{{ v.titlehref }}">
-                    {{v.img}}
-                    <p>{{v.name}}</p>
-                </a>
-            </li>
-          
-        </ul> -->
+    <!-- 折扣区域模板 -->
+    <script type="text/html" id="comment_tpl">
+        <ul>
+        {{ each result v i }}
+        <li class="item_info clearfix">
+            <a href="moneyproduct.html?productId="{{ v.productId }}>
+                <div class="left">{{@v.productImg2}}</div>
+                <div class="right">
+                <p>{{v.productName}} <span>{{v.productPinkage}}</span></p>
+                <div class="other">
+                    <span class="mall">{{ v.productFrom }} | {{v.productTime }}</span>
+                    <span class="comment">
+                        <i class="fa fa-commenting-o"></i>&nbsp;{{v.productComCount.substr(1,1)}} 
+                    </span>
+                </div>
+            </div>
+            </a>
+        </li>
+        {{ /each }}
+        </ul>
     </script>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>

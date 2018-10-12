@@ -32,6 +32,8 @@ $(function(){
         dataType:'json',
         success:function(info){
             console.log(info)
+            var htmlStr = template('comment_tpl',info)
+            $('.mm_comment .content').html(htmlStr);
         }
     })
 

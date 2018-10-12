@@ -37,14 +37,20 @@
         padding: 10px 0 10px;
         overflow: hidden;
     }
+   
     ul li {
         float: left;
         width: 25%;
         text-align: center;
         margin-top: 15px;
-        &.current {
+        
+        &:nth-child(n+9){
             display: none;
         }
+        &.current {
+            display: block;
+        }
+        
         a {
             display: block;
         }
@@ -80,8 +86,12 @@
         .left {
             width: 100px;
             height: 100px;
-            background-color: green;
+            // background-color: green;
             float: left;
+            img {
+                width: 100px;
+                height: 100px;
+            }
         }
         .right {
             // width: 100%;

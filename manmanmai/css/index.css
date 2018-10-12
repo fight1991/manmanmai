@@ -40,8 +40,11 @@
   text-align: center;
   margin-top: 15px;
 }
-.mm_nav ul li.current {
+.mm_nav ul li:nth-child(n+9) {
   display: none;
+}
+.mm_nav ul li.current {
+  display: block;
 }
 .mm_nav ul li a {
   display: block;
@@ -76,8 +79,11 @@
 .mm_comment .content .item_info .left {
   width: 100px;
   height: 100px;
-  background-color: green;
   float: left;
+}
+.mm_comment .content .item_info .left img {
+  width: 100px;
+  height: 100px;
 }
 .mm_comment .content .item_info .right {
   overflow: hidden;
