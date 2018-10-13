@@ -1,0 +1,115 @@
+//列表导航
+.mm_listNav {
+    height: 40px;
+    background-image: linear-gradient(to bottom,#fff,#f1f1f1);
+    
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+//分类列表区域
+.mm_brandlist {
+    padding-bottom: .25rem;
+    background-color: #fff;
+    .title {
+        height: 40px;
+        border: 1px solid #ccc;
+        line-height: 40px;
+        padding: 0 5px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #874604;
+        background-color: #eee;
+    }
+    .list_info {
+        i {
+            font-size: 26px;
+            margin-top: 12px;
+        }
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+
+        .num {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;            
+        }
+        &:nth-child(1) .num {
+            background-color: red;
+        }
+        &:nth-child(2) .num {
+            background-color: orange;
+        }
+        &:nth-child(3) .num {
+            background-color: green;
+        }
+        .text {
+            overflow: hidden;
+            padding-left: 10px;
+            .name {
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: black;
+            }
+        }
+    }
+    .sellNum_info,
+    .comment_info  {
+        // height: 120px;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        .img {
+            float: left;
+            width: 110px;
+            height: 100%;
+        }
+        .text {
+            overflow: hidden;
+            position: relative;
+            .head {
+                height: 40px;
+            }
+            .price {
+                color: #ea3900;
+                font-size: 18px;
+
+            }
+            .star {
+                color: orange;
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+                font-size:16px;
+            }            
+        }
+    }
+    .comment_info .detail {
+        background-color: #f8f8f8;
+        border: 1px solid #e7e7e7;
+        position: relative;
+        padding: 10px;
+        &:after {
+            content:'';
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 30px;
+            top: -7px;
+            border-bottom: 8px solid #e7e7e7;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+        }
+        .title {
+            background-color: #f8f8f8;
+            border: none;
+        }
+    }
+
+}

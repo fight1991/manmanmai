@@ -319,6 +319,34 @@ img {
   width: 34px;
   height: 34px;
 }
+.mm_search {
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  padding-right: 80px;
+  background-color: #fff;
+}
+.mm_search input {
+  line-height: 30px;
+  border-radius: 15px;
+  border: none;
+}
+.mm_search [type="text"] {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 30px;
+  background-color: #f1f1f1;
+}
+.mm_search [type="button"] {
+  width: 63px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  background-color: #ff841d;
+}
 .mm_footer {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;

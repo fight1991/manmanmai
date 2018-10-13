@@ -1,0 +1,85 @@
+.mm_bijia {
+  background-color: #fff;
+}
+.mm_bijia .title {
+  padding-top: 10px;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 18px;
+}
+.mm_bijia .img img {
+  margin: 0 auto;
+}
+.mm_bijia .tab ul li {
+  float: left;
+  width: 33.3%;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  background-image: linear-gradient(to bottom, #ffd050, #ffbb00);
+  border-bottom: solid 1px #c14d00;
+  border-top: solid 1px #c14d00;
+  color: #fff;
+}
+.mm_bijia .tab ul li:last-child {
+  border-left: 1px solid #c14d00;
+}
+.mm_bijia .tab ul li:first-child {
+  background-image: linear-gradient(to bottom, #ffa632, #ff9000);
+  border-right: 1px solid #c14d00;
+}
+.mm_bijia table {
+  border-top: 1px solid #ccc;
+  height: 40px;
+  font-size: 16px;
+}
+.mm_bijia table td {
+  vertical-align: top;
+  padding-top: 15px;
+}
+.mm_bijia table td.red {
+  text-align: right;
+  padding-right: 40px;
+  color: red;
+}
+.mm_bijia table td.p_pic {
+  vertical-align: top;
+  padding-left: 20px;
+}
+.mm_bijia .note {
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  border-top: 1px solid #ccc;
+}
+.mm_comment {
+  background-color: #fff;
+  padding-bottom: 10px;
+}
+.mm_comment .comment {
+  height: 40px;
+  line-height: 40px;
+  background-color: #ccc;
+  text-align: center;
+  border-top: 4px solid #999;
+}
+.mm_comment .title {
+  height: 40px;
+}
+.mm_comment .item {
+  background-color: #fff;
+  padding: 10px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.mm_comment .item .info {
+  padding: 10px 0;
+}
+.mm_comment .more {
+  height: 35px;
+  margin: 20px 10px;
+  line-height: 35px;
+  background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}

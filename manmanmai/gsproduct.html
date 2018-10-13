@@ -78,16 +78,16 @@
             </div>
         </div>
     </div>
-    <!-- 一级导航渲染模板 -->
+    <!-- 地点导航渲染模板 -->
     <script type="text/html" id="mall_tpl">
         {{ each result v i }}
-            <li data-shopid = "{{ v.shopId }}">{{ v.shopName }}</li>
+            <li data-shopid = "{{ v.shopId }}" data-type = "shopid">{{ v.shopName }}</li>
         {{ /each }}          
     </script>
-    <!-- 一级导航渲染模板 -->
+    <!-- 区域导航渲染模板 -->
     <script type="text/html" id="area_tpl">
             {{ each result v i }}
-                <li data-areaid = "{{ v.areaId }}">{{ v.areaName }}</li>
+                <li data-areaid = "{{ v.areaId }}" data-type = "areaid">{{ v.areaName }}</li>
             {{ /each }}          
     </script>
     <script type="text/html" id="content_tpl">

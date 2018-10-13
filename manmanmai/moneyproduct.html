@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moneyproduct</title>
+    <!-- 引入公共样式,包含normalize,base,adaptor -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/moneyproduct.css">
+</head>
+
+<body>
+    <div class="mm_container">
+        <!-- 头部区域 -->
+        <div class="mm_header">
+            <div class="back">
+                <a href="index.html" class="icon_back">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+            <h1>国内折扣</h1>
+            <div class="mm_app">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- 折扣区域-->
+        <div class="mm_discount">            
+        <!-- 挖坑 -->
+        </div>
+        <!-- 底部区域 -->
+        <div class="mm_footer">
+            <div class="foot_top clearfix">
+                <a href="#" class="foot_login">登陆</a>
+                <a href="#" class="register">注册</a>
+                <a href="#" class="backTop">返回顶部</a>
+            </div>
+            <div class="mobile_app">
+                <p>
+                    <a href="#" style="color:red">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- 折扣区域模板 -->
+    <script type="text/html" id="product_tpl">
+        <div class="discount_info">
+        <h3 class="title">{{result[0].productName}}</h3>
+        <h4 class="price">{{result[0].productPrice}}</h4>
+        <div class="inline">
+            <span class="mall">{{result[0].productFrom}}</span>
+            <span class="addtime" style="margin-right: 4px;">{{result[0].productTime}}</span>
+            <span class="author">{{result[0].productTips}}</span>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="info clearfix">
+                    <div class="imgsmall fr">{{@result[0].productImg2}}</div>
+                    {{result[0].productInfo}} 
+                </div>
+                <div class="img">{{@result[0].productImg2}}</div>
+                {{if result[0].productCity }}
+                <div>{{@result[0].productCity}}</div>
+                {{/if}}
+            </div>
+            <div class="gobuy"><a href="javascript:;" target = "_blank">前往购买</a></div>
+        </div>
+        <div class="erweima">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+    </div>
+    <!-- 评论区域 -->
+    <div>
+        {{@result[0].productComment}}
+    </div>
+    </script>
+
+    <script type="text/html" id="comment_tpl"> 
+        <span>最新评论</span>
+    
+    </script>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyproduct.js"></script>
+
+
+</body>
+
+</html>

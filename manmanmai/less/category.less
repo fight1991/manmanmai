@@ -31,11 +31,16 @@
 .mm_category {
     padding-bottom: .25rem;
     background-color: #fff;
-    .category_title {
+    .category_info {
         border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #F1F1F1;
-
+        >ul {
+            display: none;
+        }
+        &.current ul {
+            display: block;
+        }
         a {
             border-bottom: 1px solid #ccc;
             display: block;
@@ -52,6 +57,30 @@
                 line-height: .4rem;
                 color: #999;
                 font-size: .26rem;
+            }
+        }
+    }
+    .category_info .item {
+        background-color: #fff;
+        li {
+            float: left;
+            width: 33.3%;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            line-height: .4rem;
+            a {
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: .16rem;
+                height: .4rem;
+            }
+            &:nth-child(3n+1) {
+                border-left: none;
+            }
+            &:last-child {
+                border-bottom: none;
+                border-right: 1px solid #ccc;
             }
         }
     }

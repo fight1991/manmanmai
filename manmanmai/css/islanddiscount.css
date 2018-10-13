@@ -69,10 +69,10 @@
   margin: 0 auto;
 }
 .mm_discount .img_box .title {
-  font-size: .14rem;
-  height: .36rem;
+  font-size: 12px;
+  height: 36px;
+  overflow: hidden;
   font-weight: bold;
-  line-height: .18rem;
 }
 .mm_footer .foot_top {
   margin-top: 0;

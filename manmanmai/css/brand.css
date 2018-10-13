@@ -1,0 +1,113 @@
+.mm_listNav {
+  height: 40px;
+  background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.mm_brandlist {
+  padding-bottom: .25rem;
+  background-color: #fff;
+}
+.mm_brandlist .title {
+  height: 40px;
+  border: 1px solid #ccc;
+  line-height: 40px;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #874604;
+  background-color: #eee;
+}
+.mm_brandlist .list_info {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.mm_brandlist .list_info i {
+  font-size: 26px;
+  margin-top: 12px;
+}
+.mm_brandlist .list_info .num {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+.mm_brandlist .list_info:nth-child(1) .num {
+  background-color: red;
+}
+.mm_brandlist .list_info:nth-child(2) .num {
+  background-color: orange;
+}
+.mm_brandlist .list_info:nth-child(3) .num {
+  background-color: green;
+}
+.mm_brandlist .list_info .text {
+  overflow: hidden;
+  padding-left: 10px;
+}
+.mm_brandlist .list_info .text .name {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: black;
+}
+.mm_brandlist .sellNum_info,
+.mm_brandlist .comment_info {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.mm_brandlist .sellNum_info .img,
+.mm_brandlist .comment_info .img {
+  float: left;
+  width: 110px;
+  height: 100%;
+}
+.mm_brandlist .sellNum_info .text,
+.mm_brandlist .comment_info .text {
+  overflow: hidden;
+  position: relative;
+}
+.mm_brandlist .sellNum_info .text .head,
+.mm_brandlist .comment_info .text .head {
+  height: 40px;
+}
+.mm_brandlist .sellNum_info .text .price,
+.mm_brandlist .comment_info .text .price {
+  color: #ea3900;
+  font-size: 18px;
+}
+.mm_brandlist .sellNum_info .text .star,
+.mm_brandlist .comment_info .text .star {
+  color: orange;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 16px;
+}
+.mm_brandlist .comment_info .detail {
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  position: relative;
+  padding: 10px;
+}
+.mm_brandlist .comment_info .detail:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 30px;
+  top: -7px;
+  border-bottom: 8px solid #e7e7e7;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.mm_brandlist .comment_info .detail .title {
+  background-color: #f8f8f8;
+  border: none;
+}

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>category</title>
+    <title>brandTitle</title>
     <!-- 引入公共样式,包含normalize,base,adaptor -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/brandTitle.css">
 </head>
 
 <body>
@@ -32,20 +32,16 @@
             <input type="text" placeholder="请输入你想比价的商品">
             <input type="button" value="搜索">
         </div>
-
+        <!-- 列表导航区域 -->
+        <div class="mm_listNav">
+            <a href="index.html">首页></a>
+            <a href="category.html">全部分类></a>
+        </div>
         <!-- 分类区域 -->
         <div class="mm_category">
-            <ul>
-                <li class="category_info">
-                    <div class="title"></div>
-                    <ul>
-                        <li>
-                            <a href="#">手机数码
-                                <i class="fa fa-angle-down fr"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+            <div class="title">热门品牌排行</div>
+            <ul class="category_info">
+                <!-- 挖坑 -->
             </ul>
         </div>
   
@@ -69,30 +65,19 @@
     <!-- 标题模板 -->
     <script type="text/html" id="title_tpl">
         {{each result v i}}
-        <li class="category_info" data-titleid = "{{v.titleId}}">
-            <a href="javascript:;">
-                {{ v.title }}
+        <li class="category_info">
+            <a href="brand.html?brandtitleid={{v.brandTitleId}}">
+                {{ v.brandTitle }}
                 <i class="fa fa-angle-down fr"></i>
             </a>
-            <ul class="item clearfix">
-                <!-- 挖坑 -->
-            </ul>
         </li>
         {{/each}}
     </script>
-    <!-- 标题下方内容模板 -->
-    <script type="text/html" id ="item_tpl">
-        {{each result v i}}
-        <li>
-            <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">{{ v.category }}
-            </a>
-        </li>
-        {{/each}}
-    </script>
+
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/brandTitle.js"></script>
     
 </body>
 

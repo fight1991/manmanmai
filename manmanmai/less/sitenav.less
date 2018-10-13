@@ -40,49 +40,37 @@
         }
     }
 }
-//折扣区域 
-.mm_discount {
+//商场导航区域
+.mm_sitenav {
     background-color: #fff;
-    padding-bottom: .3rem;
-    .img_box {
-        padding:.1rem 0 0 .1rem;
+    ul {
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    ul li {
         float: left;
-        width: 50%;
-        border-right:1px solid #eee;
-        border-bottom: 1px solid #eee;
-        &:nth-child(2n) {
-            border-right:none;
-        }
-        .title,
-        .subtit,
-        .info {
-            padding: 0 .1rem;
-        }
-        .info {
-            height: .36rem;
-            line-height: .36rem;
+        // width: 50%;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        a { 
+            font-size: 16px;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            height: 45px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+
         }
         .img {
-            padding: .1rem 0;
+            vertical-align: middle;
+            margin-top: 3px;
+            margin-right: 5px;
         }
-        img {
-            width: 1.4rem;
-            height: 1.4rem;
-            margin: 0 auto;
+        .name {
+            vertical-align: middle;
         }
-        .title {
-            font-size: 12px;
-            height: 36px;
-            overflow: hidden;
-            font-weight: bold;
-            // line-height: 3rem;
-        }
-    }
-}
-
-//重置底部样式区域
-.mm_footer {
-    .foot_top {
-        margin-top: 0;
     }
 }

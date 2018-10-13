@@ -1,7 +1,9 @@
 //点击底部返回顶部按钮返回顶部
 $(function(){
     $('.mm_footer .backTop').click(function(){
-        $('html,body').scrollTop(0);
+        $('html,body').animate({
+            scrollTop:0
+        },500);
     })
 })
 
@@ -15,7 +17,7 @@ function getData(url) {
 //获取地址栏参数列表
 
 function getValue(k){
-    var str = location.search;//?..
+    var str = decodeURI(location.search);//?.. 
     var str1 = str.slice(1);//name=zs&age=19
     var arr = str1.split('&');
     var obj = {};
@@ -25,5 +27,5 @@ function getValue(k){
         obj[key] = value;
     })
 
-    return obj[k];
+    return obj[k] || obj ;
 }

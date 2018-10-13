@@ -1,0 +1,70 @@
+.mm_header {
+  height: 50px;
+  width: 100%;
+  background-color: #FF841D;
+  position: relative;
+  padding: 0 50px;
+  color: #fff;
+}
+.mm_header h1 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0;
+}
+.mm_header .icon_back,
+.mm_header .mm_app {
+  position: absolute;
+  top: 0;
+}
+.mm_header .icon_back {
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  color: #fff;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.mm_header .mm_app {
+  right: 0;
+}
+.mm_header .mm_app a {
+  display: block;
+  padding: 8px;
+}
+.mm_header .mm_app img {
+  width: 34px;
+  height: 34px;
+}
+.mm_sitenav {
+  background-color: #fff;
+}
+.mm_sitenav ul {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.mm_sitenav ul li {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.mm_sitenav ul li a {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 45px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+.mm_sitenav ul li .img {
+  vertical-align: middle;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.mm_sitenav ul li .name {
+  vertical-align: middle;
+}
