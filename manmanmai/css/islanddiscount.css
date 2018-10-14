@@ -41,6 +41,18 @@
   background-color: #fff;
   padding-bottom: .3rem;
 }
+.mm_discount .discount_info {
+  position: relative;
+}
+.mm_discount .discount_info .loading {
+  width: 80px;
+  height: 80px;
+  border: 5px solid green;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  animation: rotate 1.5s infinite ease-in-out;
+}
 .mm_discount .img_box {
   padding: .1rem 0 0 .1rem;
   float: left;
@@ -73,6 +85,14 @@
   height: 36px;
   overflow: hidden;
   font-weight: bold;
+}
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
 }
 .mm_footer .foot_top {
   margin-top: 0;

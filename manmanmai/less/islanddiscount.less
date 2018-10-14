@@ -44,6 +44,18 @@
 .mm_discount {
     background-color: #fff;
     padding-bottom: .3rem;
+    .discount_info {
+        position: relative;
+        .loading {
+            width: 80px;
+            height: 80px;
+            border: 5px solid green;
+            position: absolute;
+            left: 50%;
+            top:200px;
+            animation: rotate 1.5s infinite ease-in-out;            
+        }
+    }
     .img_box {
         padding:.1rem 0 0 .1rem;
         float: left;
@@ -77,6 +89,16 @@
             font-weight: bold;
             // line-height: 3rem;
         }
+    }
+}
+
+//定义动画
+@keyframes rotate {
+    from {
+        transform: translateX(-50%) rotate(0deg)
+    }
+    to {
+        transform:translateX(-50%) rotate(360deg)
     }
 }
 

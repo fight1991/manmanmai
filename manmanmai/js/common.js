@@ -18,8 +18,12 @@ function getData(url) {
 
 function getValue(k){
     var str = decodeURI(location.search);//?.. 
+    if (str.length == 0) {
+        return false;
+    }
     var str1 = str.slice(1);//name=zs&age=19
     var arr = str1.split('&');
+    
     var obj = {};
     arr.forEach(function(v,i){
         var key = v.split('=')[0];

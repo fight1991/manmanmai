@@ -74,11 +74,11 @@
             {{ /each }}
             </ul>
                 <div class="page clearfix">
-                <span><a href="#">上一页</a></span>
+                <span><a href="#" class="prev">上一页</a></span>
                 <span>
                     <select id = "selectPage">
                         {{each page v i}}
-                            {{if v.pageid == 1 }}
+                            {{if v.pageid == pageid }}
                             <option value="{{v.pageid}}" selected>{{v.pageid}}/{{ pageCount }}</option>
                             {{else}}
                             <option value="{{v.pageid}}" >{{v.pageid}}/{{ pageCount }}</option>
@@ -87,7 +87,7 @@
                         {{/each}}
                     </select>
                 </span>
-                <span><a href="#">下一页</a></span>
+                <span><a href="#" class="next">下一页</a></span>
             </div>
         </script>
          <!-- {{Math.floor(totalCount/pagesize)}} -->

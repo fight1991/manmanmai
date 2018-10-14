@@ -60,20 +60,39 @@
                 <p>m.manmanbuy.com</p>
             </div>
         </div>
+        <!-- 模态框区域 -->
+        <div class="modal" style="display:none">
+
+            <div class="imgBox">
+                <ul>
+                    
+                </ul>
+                <div class="btn">
+                    <span class="left">< </span>                       
+                    <span class="right"> > </span>
+                </div>
+            </div>
+        </div>
     </div>
+   
 
     <script type="text/html" id="product_tpl">
         {{ each result v i }}
         <div class="product clearfix">
-            <div class="img">{{@v.couponProductImg}}</div>
+            <div class="img" data-index="{{i}}">{{@v.couponProductImg}}</div>
             <div class="info">
                 <p class="text">{{v.couponProductName}}</p>
                 <p class="price">{{v.couponProductPrice}}</p>
                 <p class="date">{{v.couponProductTime}}</p>
             </div>
-        </div>
-        
+        </div>        
         {{ /each }}
+   </script>
+
+   <script type="text/html" id="modal_tpl">
+    {{each result v i }}
+    <li>{{@v.couponProductImg}}</li>
+    {{/each}}
    </script>
 
     <script src="./lib/jquery/jquery.min.js"></script>

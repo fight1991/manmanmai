@@ -34,11 +34,11 @@
         <div class="mm_bcj">
             <div class="bcj_nav">
                 <!-- 挖坑 -->
-                
-
             </div>
             <div class="bcj_content">
-                <!-- 挖坑 -->
+                <div class="bcj-list">
+                    <!-- 挖坑 -->
+                </div>
                 
             </div>
 
@@ -68,7 +68,7 @@
     
         <ul class="clearfix nav" >
             {{ each result v i }}
-            {{ if v.titleId == 0 }}
+            {{ if v.titleId == titleid }}
             <li  class="current" data-titleid = "{{v.titleId}}"><a href="javascript:;">{{ v.title }}</a></li>
             {{ else }}
             <li data-titleid = "{{v.titleId}}"><a href="javascript:;">{{ v.title }}</a></li>
@@ -80,25 +80,25 @@
     <!-- 产品详细内容模板 -->
     <script type = "text/html" id = "content_tpl">
     
-        <ul>
+        <ul class="clearfix">
             {{ each result v i }}
-            <li>
-                <a href="">
-                    <div class="img_box">{{@v.productImg}}</div>
-                    <div class="img_info">
-                        <p class="title">{{@v.productName}}</p>
-                        <p class="price">
-                            {{@v.productPrice}}
-                        </p>
-                        <div class="ticket_num">
-                            {{@v.productCouponRemain}}
+            <li class="ui-border-tb ">
+               
+                <div class="pic"><i></i>{{@v.productImg}}</div>
+                <div class="inf">
+                    <div class="i">
+                        <div class="t">{{@v.productName}}</div>
+                        <div class="pr"><i>券后</i>{{@v.productPrice}}
                         </div>
-                        <div class="ticket_link">
-                            <span href="#" class="left">{{@v.productCoupon}}</a>
-                            <span href="#" class="right">{{@v.productHref}}</a>
-                        </div>                        
                     </div>
-                </a>
+                    <div class="o">
+                        <div class="bar clearfix">{{@v.productCouponRemain}}</div>
+                        <div class="b clearfix">
+                            <div class="q">{{@v.productCoupon}}</div>
+                            <div class="g">{{@v.productHref}}</div>
+                        </div>
+                    </div>
+                </div>
             </li>
             {{/each}}
         </ul>
@@ -108,6 +108,8 @@
 
 
     <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/scrollTo/jquery.scrollTo-min.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/bcj.js"></script>
