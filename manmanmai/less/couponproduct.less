@@ -50,9 +50,13 @@
     .product {
         padding:20px 10px;
         border-bottom: 1px solid #ccc;
+        &.current .info{
+            background-color: rgba(255, 255, 0, 0.4);
+        }
         img {
         width: 100px;
         height: 80px;
+        
         }
         .img {
             float: left;
@@ -60,11 +64,16 @@
         .info {
             padding-left:10px;
             overflow: hidden;
+            
             .date {
                 color: orange;
             }
             .text {
                 height: 50px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                
             }
         }
     }

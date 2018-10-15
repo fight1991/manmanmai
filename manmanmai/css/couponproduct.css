@@ -49,6 +49,9 @@
   padding: 20px 10px;
   border-bottom: 1px solid #ccc;
 }
+.mm_coupon .product.current .info {
+  background-color: rgba(255, 255, 0, 0.4);
+}
 .mm_coupon .product img {
   width: 100px;
   height: 80px;
@@ -65,6 +68,9 @@
 }
 .mm_coupon .product .info .text {
   height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .modal {
   position: fixed;

@@ -2,19 +2,13 @@ $(function(){
     var count = 0; //存储图片的张数
     var index = 0;//记录图片的位置
     //1.渲染页面
-    $.ajax({
-        type:'get',
-        url:getData('api/getcouponproduct'),
-        data:{couponid:getValue('couponid')},
-        dataType:'json',
-        success:function(info){
-            console.log(info);
-            var htmlStr1 = template('product_tpl',info);
-            var htmlStr2 = template('modal_tpl',info)
-            $('.content').html(htmlStr1);
-            $('.modal ul').html(htmlStr2);
-            count = info.result.length;
-        }
+    getHtml('api/getcouponproduct',  getValue() ,function(info){
+        console.log(info);
+        var htmlStr1 = template('product_tpl', info);
+        var htmlStr2 = template('modal_tpl', info)
+        $('.content').html(htmlStr1);
+        $('.modal ul').html(htmlStr2);
+        count = info.result.length;
     })
 
     //2.给每个mm_coupon .content .img 注册点击事件,模态框显示
@@ -53,5 +47,10 @@ $(function(){
             index = 0;
         }
         $('.modal li').eq(index).show().siblings().hide()
+    })
+    //5.点击模态框中的图片跳转到对应页面中的位置
+    $('.imgBox').on('click','li',function(){
+        var index = $(this).index()
+        $('.content .product').eq(index).addClass('current').siblings().removeClass('current');
     })
 })

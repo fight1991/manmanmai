@@ -82,6 +82,7 @@
             </li>
         {{/each}}
         </ul>
+        {{if page.length > 0}}
         <div class="page clearfix">
             <span><a href="javascript:;" class="prev">上一页</a></span>
             <span>
@@ -98,6 +99,7 @@
             </span>
             <span><a href="javascript:;" class="next">下一页</a></span>
         </div>
+        {{/if}}
     </script>
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>

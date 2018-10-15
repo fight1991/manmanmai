@@ -65,7 +65,7 @@
 
             <div class="imgBox">
                 <ul>
-                    
+                    <!-- 挖坑 -->
                 </ul>
                 <div class="btn">
                     <span class="left">< </span>                       
@@ -77,21 +77,21 @@
    
 
     <script type="text/html" id="product_tpl">
-        {{ each result v i }}
-        <div class="product clearfix">
+        {{ each result v i }}      
+        <div class="product clearfix" id="index{{i}}">
             <div class="img" data-index="{{i}}">{{@v.couponProductImg}}</div>
             <div class="info">
                 <p class="text">{{v.couponProductName}}</p>
                 <p class="price">{{v.couponProductPrice}}</p>
                 <p class="date">{{v.couponProductTime}}</p>
             </div>
-        </div>        
+        </div>    
         {{ /each }}
    </script>
 
    <script type="text/html" id="modal_tpl">
     {{each result v i }}
-    <li>{{@v.couponProductImg}}</li>
+    <li><a href="#index{{i}}">{{@v.couponProductImg}}</a></li>
     {{/each}}
    </script>
 

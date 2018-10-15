@@ -1,38 +1,27 @@
 $(function(){
     //1.渲染店铺等数据
-    $.ajax({
-        type:'get',
-        url:getData('api/getgsshop'),
-        dataType:'json',
-        success:function(info){
-            console.log(info);
-
-            var htmlStr = template('mall_tpl',info);
-            $('.one_nav .mall ul').html(htmlStr);
-        }
+    getHtml('api/getgsshop',function(info){
+        console.log(info);
+        var htmlStr = template('mall_tpl', info);
+        $('.one_nav .mall').html(htmlStr);
     })
     //2.渲染区域数据
-    $.ajax({
-        type:'get',
-        url: getData('api/getgsshoparea'),
-        dataType:'json',
-        success:function(info){
-            console.log(info);
-            var htmlStr = template('area_tpl', info);
-            $('.one_nav .area ul').html(htmlStr);
-        }
+    getHtml('api/getgsshoparea', function (info) {
+        console.log(info);
+        var htmlStr = template('area_tpl', info);
+        $('.one_nav .area').html(htmlStr);
     })
     //3.渲染商品列表
     var shopid = 0;
     var areaid = 0;
     render();
-    //3.给one_nav 导航注册点击事件获取shopid和areaid
+    //4.给one_nav 导航注册点击事件获取shopid和areaid
     $('.one_nav').on('click','a',function(){
         // 3.1显示/隐藏下方的列表
         $(this).toggleClass('current');
         $(this).siblings().removeClass('current');
     })
-    //4.给one_nav下方的li注册点击事件
+    //5.给one_nav下方的li注册点击事件
     $('.one_nav').on('click','ul li',function(){
         //4.1获取li中的文本
         var value = $(this).text();

@@ -31,20 +31,13 @@
 
         <!-- 折扣推荐区域///更多优惠 -->
         <div class="mm_gsproduct">
-            <div class="one_nav clearfix">
-                
+            <div class="one_nav clearfix">                
                 <a href="#" class="mall">
-                    <div class="title">天猫超市</div>
-                    <ul>
-                        <!-- 挖坑 -->
-                    </ul>
-                    
+                        <!-- 挖坑 -->                    
                 </a>
                 <a href="#" class="area">
-                    <div class="title">华中</div>
-                    <ul>
                         <!-- 挖坑 -->
-                    </ul>
+
                 </a>
                 <a href="#" class="price">
                     <div class="title">全部价格</div>
@@ -52,8 +45,6 @@
                         <li>全部价格</li>
                     </ul>
                 </a>
-
-
             </div>           
             <div class="content">
                 <!-- 挖坑 -->
@@ -80,15 +71,21 @@
     </div>
     <!-- 地点导航渲染模板 -->
     <script type="text/html" id="mall_tpl">
+        <div class="title">{{result[0].shopName}}</div>
+        <ul>
         {{ each result v i }}
             <li data-shopid = "{{ v.shopId }}" data-type = "shopid">{{ v.shopName }}</li>
-        {{ /each }}          
+        {{ /each }} 
+        </ul>         
     </script>
     <!-- 区域导航渲染模板 -->
     <script type="text/html" id="area_tpl">
-            {{ each result v i }}
-                <li data-areaid = "{{ v.areaId }}" data-type = "areaid">{{ v.areaName }}</li>
-            {{ /each }}          
+        <div class="title">{{result[0].areaName.slice(0,2)}}</div>
+        <ul>
+        {{ each result v i }}
+            <li data-areaid = "{{ v.areaId }}" data-type = "areaid">{{ v.areaName.slice(0,2) }}</li>
+        {{ /each }}
+        </ul>          
     </script>
     <script type="text/html" id="content_tpl">
         <ul>

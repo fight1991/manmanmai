@@ -1,17 +1,9 @@
 $(function(){
     //1.动态渲染导航列表
-  var categoryid = getValue('categoryid');
-
-    $.ajax({
-        type:'get',
-        url:getData('api/getcategorybyid'),
-        data: { categoryid: categoryid},
-        dataType:'json',
-        success:function(info){
-            console.log(info);
-            var htmlStr = template('cateNav_tpl',info);
-            $('.mm_cateNav').html(htmlStr);
-        }
+    getHtml('api/getcategorybyid',getValue(),function(info){
+        console.log(info);
+        var htmlStr = template('cateNav_tpl', info);
+        $('.mm_cateNav').html(htmlStr);
     })
     //2.动态渲染商品列表
     $.ajax({
@@ -31,6 +23,7 @@ $(function(){
             info.page = page;
             var htmlStr = template('product_tpl',info);
             $('.mm_list').html(htmlStr);
+
             //2.3给选择按钮注册点击change事件
     
             $('#selectPage').on('change',function(){
@@ -63,9 +56,7 @@ $(function(){
                     `productlist.html?categoryid=${getValue('categoryid')}&category=${getValue('category')}&pageid=${id}`;
             })
            
-            
-
         }
     })
-    
+   
 })
