@@ -34,17 +34,17 @@ function getValue(k){
     //传参返回字符串,否则返回对象
     return obj[k] || obj ;
 }
-//4.封装渲染页面结构函数
+//4.封装通过ajax渲染页面结构函数
     function getHtml(){
         var baseUrl = 'http://127.0.0.1:9090/';
         var url = baseUrl + arguments[0];//默认为第一个参数
         var data = {};//默认不传参
         var callback ;//回调函数
         if(arguments.length == 3){
-             data = arguments[1];
-             callback = arguments[2];
+            data = arguments[1];
+            callback = arguments[2];
         }else {
-             callback = arguments[1];
+            callback = arguments[1];
         }
         $.ajax({
             type: 'get',
